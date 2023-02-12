@@ -68,10 +68,10 @@ let game = {
             'Сыграть еще разок? (Y/N) ', 
             (answer) => {
 
-                if (answer == 'Y') {
+                if (answer == 'Y' || answer == 'y') {
                     self.play();
                 }
-                else if(answer == 'N') {
+                else if(answer == 'N' || answer == 'n') {
                     console.log('Пока-пока!');
                     rl.close();
                 }
