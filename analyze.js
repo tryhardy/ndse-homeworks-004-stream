@@ -48,6 +48,7 @@ let analyze = {
             }
 
             analyze.count = result.length;
+            analyze.procent = analyze.win/analyze.count*100 + '%';
             analyzeStr = JSON.stringify(analyze);
 
             analyzeWriter.write(analyzeStr, (err) => {
