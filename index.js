@@ -10,7 +10,6 @@ const internal = require('stream');
 let game = {
 
     data: {
-        logFileExist: false,
         logName: 'log.json',
         logPath: '',
     },
@@ -97,7 +96,7 @@ let game = {
     },
 
     setLog: function(data) {
-        let stringData = JSON.stringify(data) + ',';
+        let stringData = JSON.stringify(data) + ';';
         fs.appendFile(this.data.logPath, stringData, (err) => {
             if (err) throw new Error(err)
         });
